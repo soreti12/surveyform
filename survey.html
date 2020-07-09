@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -9,6 +8,9 @@
       font-size: 10px;
     }
       body {
+        background-image: linear-gradient(to bottom, rgba(58, 58, 158, 0.8), rgba(136, 136, 206, 0.7)), url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+        background-size: cover;
+        background-position: center;
         font-family: -apple-sytem, BlinkMacSystemFont, "Segoe UI", "Robot", "Helvetica Neue", Arial, sans-serif;
         font-size: 1rem;
         font-weight: 400;
@@ -18,39 +20,27 @@
         margin: 0;
         display: block;
         box-sizing: border-box;
-      }
-      body::before {
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        z-index: -1;
-        background: var (--color-darkblue);
-          background-image: linear-gradient( 115deg,
-            rgba (58, 58, 158, 0.8)
-            rgba (136, 136, 206, 0.7)
-            url (https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg));
-        background-image: linear-gradient(
-          115deg, rgba (58, 58, 158, 0.8)
-          rgba (136, 136, 206, 0.7)
-          url (https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg));
-          );
-          
-      }
-
+        }
       main {
-        width: 100%;
-        margin: 3.125rem auto 0 auto;
+        width: 50%;
+        margin: auto;
+        padding: 10px;
         display: block;
         box-sizing: border-box;
-      }
+        }
       header {
-        padding: 0 0.625rem;
+        padding: 0;
         margin-bottom: 1.875rem;
         display: block;
+        width: 100%;
+        margin: 3.125rem auto 0 auto;
+
       }
       form {
+        background-color: rgba(27, 27, 50, 0.8);
+        border-radius: 0.25rem;
+        border: 1px solid #1B1B32;
+        margin-top: 2rem;
         padding: 2.5rem 0.625;
           padding-top: 2.5rem;
           padding-right: 0.625rem;
@@ -58,8 +48,26 @@
           padding-left: 0.625rem;
         border-radius: 0.25rem;
         display: block;
-        margin-top: 0em;
         font-size: 16px;
+        color: white;
+      }
+      label {
+        display: flex;
+        align-items: center;
+        font-size: 1.125rem;
+        margin-bottom: 0.5rem;
+        cursor: default;
+      }
+      button {
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+      }
+      .input-radio {
+        display: inline-block;
+        margin-right: 0.625rem;
+        min-height: 1.25rem;
+        min-width: 1.25rem;
       }
       h1 {
         display: block;
@@ -70,32 +78,116 @@
         line-height: 1.2;
       }
       p {
-        text-align: center;
+        float: left;
         font-weight: 200;
         margin-top: 0;
         margin-bottom: 0.5rem;
         font-size: 1.125rem;
         box-sizing: border-box;
         display: block;
+        font-size: 16px;
 
       }
       #title {
         text-align: center;
+        color: white;
+        font-family: sans-serif;
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+        font-weight: 400;
+        line-height: 1.2;
+        box-sizing: border-box;
+        font-size: 36px;
       }
       #description{
+        color: white;
         text-align: center;
+        font-size: 18px;
+        line-height: 20mpx;
         font-weight: 200;
-        text-shadow: 1px 1px 1px rgba (0, 0, 0, 0.4)
+        text-shadow: 1px 1px 1px rgba (0, 0, 0, 0.4);
         margin-top: 0;
         margin-bottom: 0.5rem;
         font-size: 1.125;
         box-sizing: border-box;
+        display: block;
       }
       .form-group {
         margin: 0 auto 1.25rem auto;
         padding: 0.25rem;
+        box-sizing: border-box;
         display: block;
       }
+      #name-label {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.5rem;
+      }
+      #name {
+        display: block;
+        width: 100%;
+        height: 2.375rem;
+        padding: 0.375rem 0.75rem;
+        color: #495047;
+        background-color: #fff;
+        border-radius: 0.25rem;
+        border: 1px solid #ced4da;
+      }
+      #email-label {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.5rem;
+      }
+      #email {
+        display: block;
+        width: 100%;
+        height: 2.375rem;
+        padding: 0.375rem 0.75rem;
+        color: #495047;
+        background-color: #fff;
+        border-radius: 0.25rem;
+        border: 1px solid #ced4da;
+      }
+      #age-label {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.5rem;
+      }
+      #age {
+        display: block;
+        width: 100%;
+        height: 2.375rem;
+        padding: 0.375rem 0.75rem;
+        color: #495047;
+        background-color: #fff;
+        border-radius: 0.25rem;
+        border: 1px solid #ced4da;
+      }
+      #dropdown {
+        display: block;
+        width: 100%;
+        height: 2.375rem;
+        padding: 0.375rem 0.75rem;
+        color: #495047;
+        background-color: #fff;
+        border-radius: 0.25rem;
+        border: 1px solid #ced4da;
+      }
+
+      #reccomend {
+
+      }
+      #check {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.5rem;
+      }
+      #comment {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.5rem;
+      }
+
     </style>
   </head>
   <body>
@@ -106,29 +198,28 @@
     </header>
       <form id="survey-form">
         <div class="form-group">
-          <h3 id="name">Name</h3>
-          <input type="text" name="Enter your name" value="Enter your name">
+          <label id="name-label" for="name">Name</label>
+            <input id="name" type="text" name="name" placeholder="Enter your name" required>
         </div>
         <div id="group-form">
-          <h3 id="email">Email</h3>
-          <input type="text" name="Enter your Email" value="Enter your email">
+          <label id="email-label" for="email">Email</label>
+            <input id="email" type="email" name="emaill" placeholder="Enter your email" required>
         </div>
         <div id="group-form">
-          <h3 id="number">Age <i>(optional)</i> </h3>
-          <label for="number"></label>
-          <input id="number" type="number" name="age" min="10" max="99" placeholder="Age">
+          <label id="age-label" for="age">Age <i>(optional)</i> </label>
+            <input id="age" type="number" name="age" min="10" max="99" placeholder="Age">
         </div>
         <div id="group-form">
-          <p>Which option best describes your current role?</p>
-          <select id="dropdown" name="role">
-            <option disabled selected value>Select current role</option>
-            <option value="student">Student</option>
-            <option value="job">Full Time Job</option>
-            <option value="learner">Full Time Learner</option>
-          </select>
+          <p id="dropdown-label">Which option best describes your current role?</p>
+            <select id="dropdown" name="dropdown">
+              <option disabled selected value>Select current role</option>
+              <option value="student">Student</option>
+              <option value="job">Full Time Job</option>
+              <option value="learner">Full Time Learner</option>
+            </select>
         </div>
         <div id="group-form">
-          <p>Would you recomment freeCodeCamp to a friend?</p>
+          <p id="reccomend-label">Would you reccomend freeCodeCamp to a friend?</p>
           <label for="definitely">
             <input id="definitely" type="radio" name="recomment">Definitely
           </label>
@@ -140,8 +231,8 @@
           </label>
         </div>
         <div id="group-form">
-          <p>What is your favorite feature of freeCodeCamp</p>
-          <select class="option" name="feature">
+          <label id="option" for="option">What is your favorite feature of freeCodeCamp?</label>
+            <select class="option" name="feature">
             <option disabled selected value>Select an option</option>
             <option value="challenges">Challenges</option>
             <option value="projects">Projects</option>
@@ -150,44 +241,44 @@
           </select>
         </div>
         <div id="group-form">
-              <p>What would you like to see improved? <i>Check all that apply</i> </p>
-          <label for="front-end">
-            <input id="front-end" type="checkbox" name="input-checkbox">Front-end Projects
-          </label>
-          <label for="back-end">
-            <input id="back-end" type="checkbox" name="input-checkbox">Back-end Projects
-          </label>
-          <label for="data">
-            <input id="data" type="checkbox" name="input-checkbox">Data Visualization
-          </label>
-          <label for="challenges">
-            <input id="challenges" type="checkbox" name="input-checkbox">Challenges
-          </label>
-          <label for="open">
-            <input id="open" type="checkbox" name="input-checkbox">Open Source Community
-          </label>
-          <label for="gitter">
-            <input id="gitter" type="checkbox" name="input-checkbox">Gitter help rooms
-          </label>
-          <label for="videos">
-            <input id="videos" type="checkbox" name="input-checkbox">Videos
-          </label>
-          <label for="city">
-            <input id="city" type="checkbox" name="input-checkbox">City Meetups
-          </label>
-          <label for="wiki">
-            <input id="wiki" type="checkbox" name="input-checkbox">Wiki
-          </label>
-          <label for="forum">
-            <input id="forum" type="checkbox" name="input-checkbox">Forum
-          </label>
-          <label for="additional">
-            <input id="additional" type="checkbox" name="input-checkbox">Additional Courses
-          </label>
+          <label id="check" for="check">What would you like to see improved? </label>
+            <label for="front-end">
+              <input id="front-end" type="checkbox" name="input-checkbox">Front-end Projects
+            </label>
+            <label for="back-end">
+              <input id="back-end" type="checkbox" name="input-checkbox">Back-end Projects
+            </label>
+            <label for="data">
+              <input id="data" type="checkbox" name="input-checkbox">Data Visualization
+            </label>
+            <label for="challenges">
+              <input id="challenges" type="checkbox" name="input-checkbox">Challenges
+            </label>
+            <label for="open">
+              <input id="open" type="checkbox" name="input-checkbox">Open Source Community
+            </label>
+            <label for="gitter">
+              <input id="gitter" type="checkbox" name="input-checkbox">Gitter help rooms
+            </label>
+            <label for="videos">
+              <input id="videos" type="checkbox" name="input-checkbox">Videos
+            </label>
+            <label for="city">
+              <input id="city" type="checkbox" name="input-checkbox">City Meetups
+            </label>
+            <label for="wiki">
+              <input id="wiki" type="checkbox" name="input-checkbox">Wiki
+            </label>
+            <label for="forum">
+              <input id="forum" type="checkbox" name="input-checkbox">Forum
+            </label>
+            <label for="additional">
+              <input id="additional" type="checkbox" name="input-checkbox">Additional Courses
+            </label>
         </div>
         <div id="group-form">
-          <p>Any comments or suggestions?</p>
-        <input type="text" name="" value="Enter your comment here...">
+          <label id="comment" for="comment">Any comments or suggestions?</label>
+            <input type="text" name="" placeholder="Enter your comment here..." >
       </div>
     </form>
 
